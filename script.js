@@ -1,0 +1,319 @@
+// // // Print odd numbers in an array using arrow function
+
+// // let arr = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+// // let odds = arr.filter(n => n%2)
+
+// // console.log(odds)
+
+// // // Print odd numbers in an array using anonymous function
+// // var arrlist = [1,2,3,4,5,6,7,8,9,10,11,12]
+// // var oddlist = [];
+// // var oddnum = function() {
+// //     for(var i of arrlist){
+// //         if(i%2!=0){
+// //             oddlist.push(i);
+// //             }
+// //     }
+
+// //     return console.log(oddlist);
+// // }
+
+// // oddnum();
+
+// // // Print odd numbers in an array using IIFE function 
+
+// // var arrlist = [1,2,3,4,5,6,7,8,9,10,11,12]
+// // var oddlist = [];
+// // var oddnum = function() {
+// //     for(var i of arrlist){
+// //         if(i%2!=0){
+// //             oddlist.push(i);
+// //             }
+// //     }
+
+// //     return console.log(oddlist);
+// // }();
+
+// // // b.Convert all the strings to title caps in a string array using Anonymous function
+
+// // var changecase = function (str) {
+// //     str = str.toLowerCase().split(' ');
+// //     for (let i = 0; i < str.length; i++) {
+// //         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+// //     }
+// //     return str.join(' ');
+// // }
+// // console.log(changecase("geeks for geeks"));
+
+// // //b. Convert all the strings to title caps in a string array using IIFE function
+// // var changecase = function (str) {
+// //     str = str.toLowerCase().split(' ');
+// //     for (let i = 0; i < str.length; i++) {
+// //         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+// //     }
+// //     return str.join(' ');
+// // }
+// // console.log(changecase("geeks for geeks"));
+
+// // // b.Convert all the strings to title caps in a string array using arrow function
+
+// // const str = "geeks for geeks";
+// // let titleCase = "";
+// // str.split(" ").forEach(word => {
+// //     const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+// //     titleCase += capitalizedWord + " ";
+// // });
+// // console.log(titleCase);
+
+
+// // C.Sum of all numbers in an array using anonymous function
+
+// var arrlistitems = [1,3,4,5,6,7];
+
+// var sum = 0;
+// var sumofallnum = function(){
+    
+// for(var i=0; i<arrlistitems.length;i++)
+// {
+//     sum += arrlistitems[i];
+// }
+
+// console.log(sum)
+// }
+
+// sumofallnum();
+
+// // C.Sum of all numbers in an array using IIFE function
+
+
+// var arrlistitems = [1,3,4,5,6,7];
+
+// var sum = 0;
+// var sumofallnum = function(){
+    
+// for(var i=0; i<arrlistitems.length;i++)
+// {
+//     sum += arrlistitems[i];
+// }
+
+// console.log(sum)
+// }();
+
+// // C.Sum of all numbers in an array using Arrow function
+
+
+// var arrlistitems = [1,2,3,4,5,6];
+
+// var sum = arrlistitems.reduce(function (x, y){
+//     return x + y;
+
+// }, 0);
+
+// console.log(sum);
+
+// // Return all the prime numbers in an array using anonymous function
+
+// var arrlist =[];
+
+// var primenumlist = function(){
+
+// for(var i =2;i<10;i++)
+// {
+//   var isprime = true;
+//   for(var j=(i-1);j>=2;j--)
+//   {
+//     if(i%j==0)
+//     {
+//       isprime=false;
+//     }
+//   }
+//   if(isprime){
+//     arrlist.push(i)
+//   }
+// }
+// console.log(arrlist);
+// }
+
+
+
+// primenumlist();
+
+
+// // Return all the prime numbers in an array using IIFE function
+
+// var arrlist =[];
+
+// var primenumlist = function(){
+
+// for(var i =2;i<10;i++)
+// {
+//   var isprime = true;
+//   for(var j=(i-1);j>=2;j--)
+//   {
+//     if(i%j==0)
+//     {
+//       isprime=false;
+//     }
+//   }
+//   if(isprime){
+//     arrlist.push(i)
+//   }
+// }
+// console.log(arrlist);
+// }();
+
+// // Return all the prime numbers in an array using arrow function
+
+// var arrlist =[];
+
+// var primenumlist = () => {
+
+// for(var i =2;i<10;i++)
+// {
+//   var isprime = true;
+//   for(var j=(i-1);j>=2;j--)
+//   {
+//     if(i%j==0)
+//     {
+//       isprime=false;
+//     }
+//   }
+//   if(isprime){
+//     arrlist.push(i)
+//   }
+// }
+// console.log(arrlist);
+// }
+// primenumlist();
+
+
+// e. Return all the Palindromes in an array
+
+
+var arr = [121,232,434, 20];
+var n = arr.length;
+var res = isPolinArray(arr, n);
+if(res == true)
+console.log("Array is polindrome", (arr));
+else
+console.log("Array is not Polindrome",(arr));
+
+function isPolinArray(arr, n)
+{
+  for(let i = 0;i<n;i++)
+  {
+    let ans = isPalindrome(arr[i]);
+    if(ans == false)
+    return false;
+  }
+  return true;
+}
+function isPalindrome(N){
+  let str = "" + N;
+  let len = str.length;
+  for(let i =0; i<parseInt(len/2, 10);i++)
+  {
+    if(str[i] !=str[len-1-i])
+    return false;
+  }
+  return true;
+}
+
+// Return median of two sorted arrays of the same size
+
+function getMedian(ar1, ar2, n)
+{
+    var i = 0;
+    var j = 0; 
+    var count;
+    var m1 = -1, m2 = -1;
+    for (count = 0; count <= n; count++)
+    {
+       
+        if (i == n)
+        {
+            m1 = m2;
+            m2 = ar2[0];
+            break;
+        }
+        
+        else if (j == n)
+        {
+            m1 = m2;
+            m2 = ar1[0];
+            break;
+        }
+        
+        if (ar1[i] <= ar2[j])
+        {
+            m1 = m2; 
+            m2 = ar1[i];
+            i++;
+        }
+        else
+        {
+            m1 = m2; 
+            m2 = ar2[j];
+            j++;
+        }
+    }
+ 
+    return (m1 + m2)/2;
+}
+
+var ar1 = [1, 12, 15, 26, 38];
+var ar2 = [2, 13, 17, 30, 45];
+var n1 = ar1.length;
+var n2 = ar2.length;
+if (n1 == n2)
+   console.log("Median is "+ getMedian(ar1, ar2, n1));
+
+
+// Remove dupicates from an array
+
+var arr = [1,2,3,4,5,6,7,8,9,3,4,5,6,5,5,5];
+ 
+ var removeDuplicates = function(arr) {
+    return arr.filter((item,
+        index) => arr.indexOf(item) === index);
+}
+console.log(removeDuplicates(arr));
+
+
+// Remove Duplicates an array
+
+let Array = [1, 2, 3, 4, 5];
+let N = Array.length;
+let K = 3;
+
+function RightRotate(a, n, k)
+{
+       k = k % n;
+ 
+    for (let i = 0; i < n; i++) {
+        if (i < k) {
+ 
+            console.log(a[n + i - k]);
+        }
+        else {
+ 
+          
+            console.log((a[i - k]));
+        }
+    }
+  
+}
+RightRotate(Array, N, K);
+
+
+
+
+
+
+
+
+
+
+
+
